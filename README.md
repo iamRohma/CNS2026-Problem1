@@ -1,2 +1,19 @@
 # CNS2026-Problem1
-CCP-CNS2026 Computer Networks Project — Problem 1: Multi-Site Enterprise Network. Includes VLANs, inter-VLAN routing, DHCP, ACLs, attack simulation and mitigation using Cisco Packet Tracer and Wireshark.
+This project stimulates a secure enterprise network for *Apex Manufacturing*, a company with three departments : Sales, Engineering, and Admin.
+
+# Objectives
+-Create 3 vlans (Sales, Engineering, Admin)\
+-Configure Inter-VLAN routing (Router-on-a-Stick)
+-Set up DHCP for all VLANs
+-Implement security (ACLs, DHCP Snooping)
+-Simulate a DoS attack and mitigate it
+
+#Tools Used
+-Cisco Packet Tracer
+- Wireshark
+- draw.io
+
+
+
+
+
