@@ -1,0 +1,42 @@
+! Switch1 Running Configuration
+! CCP-CNS2026 Problem 1 - Apex Manufacturing
+
+hostname Switch1
+
+! VLAN Configuration
+vlan 10
+ name Sales
+vlan 20
+ name Engineering
+vlan 30
+ name Admin
+
+! Access Ports
+interface FastEthernet0/2
+ switchport mode access
+ switchport access vlan 10
+
+interface FastEthernet0/3
+ switchport mode access
+ switchport access vlan 20
+
+interface FastEthernet0/4
+ switchport mode access
+ switchport access vlan 30
+
+interface FastEthernet0/5
+ switchport mode access
+ switchport access vlan 30
+
+interface FastEthernet0/6
+ switchport mode access
+ switchport access vlan 10
+
+! Trunk Port (to Router)
+interface GigabitEthernet0/1
+ switchport mode trunk
+ ip dhcp snooping trust
+
+! DHCP Snooping
+ip dhcp snooping
+ip dhcp snooping vlan 10,20,30
