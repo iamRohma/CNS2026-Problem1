@@ -1,0 +1,14 @@
+! Router1 Final Configuration - Week 3
+! CCP-CNS2026 Problem 1 - Apex Manufacturing
+
+! ACL - Sales Security (Attack Mitigation)
+ip access-list extended SALES_SECURITY
+ deny ip host 192.168.10.50 any
+ deny ip 192.168.10.0 0.0.0.255 192.168.30.0 0.0.0.255
+ permit ip any any
+
+! Applied on VLAN 10 sub-interface
+interface GigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+ ip access-group SALES_SECURITY in
