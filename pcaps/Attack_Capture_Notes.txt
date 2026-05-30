@@ -1,0 +1,33 @@
+PCAP Capture Notes
+CCP-CNS2026 — Problem 1: Multi-Site Enterprise Network
+
+─────────────────────────────────────
+
+ATTACK SIMULATION DETAILS:
+
+Tool Used: Cisco Packet Tracer Simulation Mode
+Attacker: Kali-Attacker (192.168.10.50) - VLAN 10
+Target: Web-Server (192.168.30.100) - VLAN 30
+Attack Type: ICMP Flood (DoS) - 1000 packets
+Command Used: ping 192.168.30.100 -n 1000
+
+─────────────────────────────────────
+
+RESULTS:
+
+Pre-Mitigation:
+- Attacker sent packets toward web server
+- Traffic visible in Packet Tracer simulation mode
+
+Post-Mitigation:
+- ACL SALES_SECURITY applied on Gi0/0.10
+- Packets Sent: 5, Received: 0, Lost: 5 (100% loss)
+- All attack traffic successfully blocked
+
+─────────────────────────────────────
+
+NOTE:
+Packet Tracer does not support real PCAP export.
+Attack traffic was captured using Packet Tracer's
+built-in Simulation Mode and screenshots were taken
+as evidence. Screenshots are saved in docs/ folder.
